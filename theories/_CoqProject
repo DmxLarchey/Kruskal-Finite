@@ -1,0 +1,6 @@
+-R . KruskalFinite
+
+finite.v
+choice.v
+decide.v
+
