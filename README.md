@@ -19,8 +19,8 @@ This is a collection of tools based on the following notion of finiteness
 # Dependencies
 
 There is a dependency with [`Kruskal-Trees`](https://github.com/DmxLarchey/Kruskal-Trees) because:
-- in the [`finite.v`](theories/finite.v) file, we prove results about `idx n` and `vec X n` which are defined in `Kruskal-Trees`;
-- in the [`examples/trees.v`](theories/examples/trees.v), we actually show that there are finitely many rose trees (ie arbitrarily but finite branching trees) of a given (or bounded) number of nodes, and we need those `Kruskal-Trees`, ie `rtree X` and `ltree X`, and also `list_sum`.
+- in the [`finite.v`](theories/finite.v) file, we prove finiteness results about the types `idx n` and `vec X n` which are actually defined in `Kruskal-Trees`;
+- in the [`examples/trees.v`](theories/examples/trees.v), we moreover show that there are finitely many rose trees (ie arbitrarily but finite branching trees) of a given (or bounded) number of nodes, and we need `rtree X` and `ltree X` (and also `list_sum`).
 
 # How to install
 
