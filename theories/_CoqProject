@@ -4,3 +4,4 @@ finite.v
 choice.v
 decide.v
 
+examples/trees.v
