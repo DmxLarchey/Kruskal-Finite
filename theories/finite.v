@@ -294,14 +294,14 @@ Section fin_idx_rel.
       * intros ? ?; idx invert all.
       * vec invert v; auto.
     + intros R HP.
-      finite as (fun v => exists x, (exists w, x##w = v /\ forall p, R (idx_nxt p) (w⦃p⦄)) /\ R idx_fst x ).
+      finite as (λ v, ∃x, (∃w, x##w = v ∧ ∀p, R (idx_nxt p) (w⦃p⦄)) ∧ R idx_fst x ).
       * intros v; split.
-        - intros (y & (w & <- & H1) & H3); simpl in H1; intros p; idx invert p; auto.
+        - intros (? & (? & <- & ?) & ?); simpl in *; intros p; idx invert p; auto.
         - vec invert v as x v; intros H; exists x; split.
           ++ exists v; split; auto; intros; apply (H (idx_nxt _)).
           ++ apply (H idx_fst).
       * do 2 (intros; finite compose).
-        apply IHm with (R := fun p => R (idx_nxt p)); auto.
+        apply IHm with (R := λ p, R (idx_nxt p)); auto.
   Qed.
 
 End fin_idx_rel.
