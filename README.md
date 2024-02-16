@@ -24,4 +24,4 @@ There is a dependency with [`Kruskal-Trees`](https://github.com/DmxLarchey/Krusk
 
 # How to install
 
-This library is CI tested with Coq `8.14`-`8.18` and should install smoothly with `opam install coq-kruskal-finite`.
+This library is CI tested with Coq `8.14`-`8.19` and should install smoothly with `opam install coq-kruskal-finite`.
