@@ -318,7 +318,7 @@ Section fin_measure.
 
   Variable (X : Type) (m : X → nat) (n : nat) (Hn : ∀i, i < n → fin (λ x, m x = i)).
 
-  Fact fin_measure_le i : i < n → fin (λ x, m x <= i).
+  Fact fin_measure_le i : i < n → fin (λ x, m x ≤ i).
   Proof.
     intros Hi.
     finite as (fun x => exists j, m x = j /\ j <= i).

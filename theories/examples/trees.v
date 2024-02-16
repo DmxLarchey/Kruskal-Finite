@@ -41,8 +41,8 @@ Section fin_list_sum.
         j = 0 /\ [] = l
      \/ (exists x, [x] = l /\ f x = j)
      \/ exists c, (exists p, fst p ++ snd p = l
-                                                    /\ list_sum f (fst p) = fst c
-                                                    /\ list_sum f (snd p) = snd c)
+                          /\ list_sum f (fst p) = fst c
+                          /\ list_sum f (snd p) = snd c)
                 /\ 0 < fst c /\ 0 < snd c /\ fst c + snd c = j).
     + intros l; split.
       * intros [ (-> & <-) | [ (x & <- & <-)
@@ -67,7 +67,7 @@ Section fin_list_sum.
 
 End fin_list_sum.
 
-Theorem fin_rtree_size_eq n : fin (fun t => ⌊t⌋ᵣ = n).
+Theorem fin_rtree_size_eq n : fin (λ t, ⌊t⌋ᵣ = n).
 Proof.
   induction n as [ n IHn ] using (well_founded_induction_type lt_wf).
   apply fin_equiv with (P := fun t => exists l, ⟨l⟩ᵣ = t /\ 1+list_sum (fun t => ⌊t⌋ᵣ) l = n).
