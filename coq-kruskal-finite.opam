@@ -1,6 +1,6 @@
 opam-version: "2.0"
 name: "Coq-Kruskal-Finite"
-version: "1.1"
+version: "1.2"
 synopsis: "Coq library for manipulating finiteness, finite choice and decision as used in proof of Kruskal's tree theorem"
 description: """
    Tools to facilitate proofs of finiteness (ie listability), finite choice principles 
@@ -21,9 +21,8 @@ install: [
 ]
 
 depends: [
-  "ocaml"
-  "coq" {>= "8.14" & < "8.19~"}
-  "coq-kruskal-trees" {= "1.1"} 
+  "coq" {>= "8.14" & < "8.20~"}
+  "coq-kruskal-trees" {>= "1.1"} 
 ]
 
 #url { git: "https://github.com/DmxLarchey/Kruskal-Finite.git" }
