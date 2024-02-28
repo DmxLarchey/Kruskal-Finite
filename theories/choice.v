@@ -11,12 +11,12 @@ From Coq
   Require Import List Utf8.
 
 From KruskalTrees
-  Require Import list_utils idx vec.
+  Require Import list_utils.
 
 From KruskalFinite
   Require Import finite.
 
-Import ListNotations idx_notations vec_notations.
+Import ListNotations.
 
 Set Implicit Arguments.
 

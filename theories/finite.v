@@ -8,10 +8,10 @@
 (**************************************************************)
 
 From Coq
-  Require Import Arith List Lia Utf8.
+  Require Import Arith Lia List Utf8.
 
 From KruskalTrees
-  Require Import idx vec notations tactics list_utils.
+  Require Import notations tactics list_utils idx vec.
 
 Import ListNotations idx_notations vec_notations.
 
