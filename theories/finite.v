@@ -8,10 +8,10 @@
 (**************************************************************)
 
 From Coq
-  Require Import Arith List Lia Utf8.
+  Require Import Arith Lia List Utf8.
 
 From KruskalTrees
-  Require Import idx vec notations tactics.
+  Require Import notations tactics list_utils idx vec.
 
 Import ListNotations idx_notations vec_notations.
 
@@ -313,6 +313,26 @@ Fact fin_vec_fall2 X Y (R : X → Y → Prop) n (v : vec X n) :
 Proof. intros H; apply fin_idx_rel with (1 := H). Qed.
 
 #[global] Hint Resolve fin_vec_fall2 : finite_db.
+
+#[local] Hint Resolve in_eq in_cons : core.
+
+Fact fin_Forall2 X Y (R : X → Y → Prop) l : (∀x, x ∈ l → fin (R x)) → fin (Forall2 R l).
+Proof.
+  induction l as [ | x l IHl ]; intros Hl.
+  + finite as (eq []).
+    intro; rewrite Forall2_nil_inv_l; split; auto.
+  + finite as (λ v, ∃y, (∃m, y::m = v ∧ Forall2 R l m) ∧ R x y).
+    * intros m; rewrite Forall2_cons_inv_l; firstorder.
+    * finite compose; eauto.
+Qed.
+
+Fact fin_Forall2_rev X Y (R : X → Y → Prop) m : (∀y, y ∈ m → fin (λ x, R x y)) → fin (λ l, Forall2 R l m).
+Proof.
+  intros H.
+  finite as (Forall2 (λ y x, R x y) m).
+  + intro; apply Forall2_xchg.
+  + now apply fin_Forall2.
+Qed.
 
 Section fin_measure.
 
