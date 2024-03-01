@@ -14,7 +14,7 @@ bug-reports: "https://github.com/DmxLarchey/Kruskal-Finite/issues"
 dev-repo: "git+https://github.com:DmxLarchey/Kruskal-Finite/"
 
 build: [
-  [ make "-j%{jobs}%"]
+  [make "-j%{jobs}%"]
 ]
 install: [
   [make "install"]
