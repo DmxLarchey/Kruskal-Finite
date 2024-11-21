@@ -19,7 +19,7 @@
     "dateModified": "2024-11-21",
     "datePublished": "2024-01-19",
     "description": "This is a collection of tools to abstractly manipulate the notion of finiteness in Coq.",
-    "downloadUrl": "https://github.com/DmxLarchey/Kruskal-Finite",
+    "downloadUrl": "https://github.com/DmxLarchey/Kruskal-Finite/archive/refs/tags/1.5.tar.gz",
     "funder": {
         "type": "Organization",
         "name": "CNRS"
