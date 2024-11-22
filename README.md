@@ -12,7 +12,7 @@
 
 # What is this library?
 
-This is a collection of tools based on the following notion of finiteness
+This is a collection of Coq `8.14+` tools based on the following notion of finiteness
 - a type is finite if it is listable: there is a (computable) list collecting all its members
 - a predicate is finite if its span is listable
 
@@ -24,4 +24,4 @@ There is a dependency with [`Kruskal-Trees`](https://github.com/DmxLarchey/Krusk
 
 # How to install
 
-This library is CI tested with Coq `8.14`-`8.19` and should install smoothly with `opam install coq-kruskal-finite`.
+This library is CI tested with Coq `8.14`-`8.20` and should install smoothly with `opam install coq-kruskal-finite`.
