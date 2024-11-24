@@ -12,6 +12,8 @@
 
 # What is this library?
 
+This sub-project is part of the larger project `Coq-Kruskal` described here: https://github.com/DmxLarchey/Coq-Kruskal.
+
 This is a collection of Coq `8.14+` tools based on the following notion of finiteness
 - a type is finite if it is listable: there is a (computable) list collecting all its members
 - a predicate is finite if its span is listable
