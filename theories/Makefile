@@ -23,4 +23,3 @@ wc: force
 	@+$(MAKE) -f Makefile.rocq $@
 
 .PHONY: all clean force
-
