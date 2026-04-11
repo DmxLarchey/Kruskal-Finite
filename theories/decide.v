@@ -17,8 +17,8 @@ Import ListNotations.
 
 Set Implicit Arguments.
 
-Notation decider A := ({A}+{¬A}).
-Notation discrete A := (∀ x y : A, decider (x=y)).
+Abbreviation decider A := ({A}+{¬A}).
+Abbreviation discrete A := (∀ x y : A, decider (x=y)).
 
 Fact decider_swap (A B : Prop) :   {A}+{B} → {B}+{A}.                      Proof. tauto. Qed.
 Fact decider_decide (A B : Prop) : {A}+{B} → A ∨ B.                        Proof. tauto. Qed.
